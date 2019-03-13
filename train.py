@@ -298,7 +298,7 @@ def train(freeze=False, fold_index=1, model_name='seresnext50',min_num_class=10,
 
 if __name__ == '__main__':
     if 1:
-        os.environ['CUDA_VISIBLE_DEVICES'] = '0,1,2,3,5'
+        os.environ['CUDA_VISIBLE_DEVICES'] = '0'
         freeze = False
         model_name = 'senet154'
         fold_index = 1
