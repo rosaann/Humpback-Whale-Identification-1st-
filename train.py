@@ -2,7 +2,9 @@ import datetime
 import os
 
 from timeit import default_timer as timer
-from dataSet import *
+from dataSet.reader import *
+from dataSet.transform import *
+
 from models import *
 import torch
 import time
