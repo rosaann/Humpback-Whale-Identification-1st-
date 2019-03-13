@@ -159,7 +159,7 @@ def eval(model, dataLoader_valid):
         valid_loss /= index_valid
         return valid_loss, top1, top5, map5, best_t
 
-def train(freeze=False, fold_index=1, model_name='seresnext50',min_num_class=10, checkPoint_start=0, lr=3e-4, batch_size=36):
+def train(freeze=False, fold_index=1, model_name='seresnext50',min_num_class=10, checkPoint_start=0, lr=3e-4, batch_size=16):
     num_classes = 5004 * 2
     model = model_whale(num_classes=num_classes, inchannels=4, model_name=model_name).cuda()
     i = 0
@@ -307,6 +307,6 @@ if __name__ == '__main__':
         min_num_class = 10
         checkPoint_start = 0
         lr = 3e-4
-        batch_size = 12
+        batch_size = 4
         print(5005%batch_size)
         train(freeze, fold_index, model_name, min_num_class, checkPoint_start, lr, batch_size)
