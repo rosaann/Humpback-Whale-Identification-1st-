@@ -120,6 +120,7 @@ class WhaleDataset(Dataset):
         else:
             anchor_name, positive_name = random.sample(names, 2)
         negative_label = random.choice(list(set(self.labels) ^ set([label, 'new_whale'])))
+        print('negative_label ', negative_label)
         negative_name = random.choice(self.dict_train[negative_label])
         negative_label2 = 'new_whale'
         negative_name2 = random.choice(self.dict_train[negative_label2])
